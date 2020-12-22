@@ -4,6 +4,11 @@
   background: base.$bg-color;
   color: base.$text-color;
 
+  &,
+  .navbar-collapse {
+    transition: 1s all;
+  }
+
   a {
     color: base.$text-color !important;
   }
