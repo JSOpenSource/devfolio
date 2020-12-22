@@ -1,0 +1,31 @@
+{
+  "name": "devfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@reduxjs/toolkit": "^1.5.0",
+    "bootstrap": "^4.5.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-headroom": "^3.1.0",
+    "react-hook-form": "^6.13.1",
+    "react-redux": "^7.2.2",
+    "react-reveal": "^1.2.2",
+    "react-typist": "^2.0.5",
+    "reactstrap": "^8.7.1",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.30.0"
+  }
+}

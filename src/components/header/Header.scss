@@ -1,0 +1,68 @@
+@use './../../base';
+
+header {
+  .logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-top: 10px;
+    line-height: normal;
+    font-size: 1.5rem;
+  }
+
+  .logo:hover {
+    background-color: none;
+  }
+
+  .logo-name {
+    font-family: "Agustina Regular";
+    font-weight: bold;
+    font-variant-ligatures: no-common-ligatures;
+    -webkit-font-variant-ligatures: no-common-ligatures;
+    padding: 0 10px;
+    font-size: 1.5rem;
+  }
+
+  a {
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .navbar-collapse {
+    background: base.$bg-color;
+  }
+
+  @media (max-width: 767px) {
+    .navbar-collapse {
+      position: absolute;
+      top: 100px;
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .navbar-collapse {
+      top: 75px;
+    }
+
+    .navbar,
+    .navbar-brand {
+      padding: 5px;
+    }
+
+    .logo-name {
+      font-size: 20px;
+    }
+  }
+}
+
+.dark-mode {
+  .navbar-toggler {
+    background: base.$text-color;
+  }
+}

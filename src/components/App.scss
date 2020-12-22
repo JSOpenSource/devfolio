@@ -1,0 +1,10 @@
+@use './../base';
+
+.folio-container {
+  background: base.$bg-color;
+  color: base.$text-color;
+
+  a {
+    color: base.$text-color !important;
+  }
+}
