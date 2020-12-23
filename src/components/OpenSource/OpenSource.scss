@@ -1,0 +1,19 @@
+@use './../../base';
+
+.openSource {
+    min-height: 10vh;
+    padding: 1rem;
+}
+
+.item {
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: 0.9rem;
+}
+
+.language {
+    font-size: 0.8rem;
+}
+
+.repoName {
+    font-size: 1.1rem;
+}

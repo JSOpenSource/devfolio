@@ -25,33 +25,33 @@ export default function Profile() {
       {isEditable ? (
         <Edit fields={profileFields} onSubmit={onDataChange} />
       ) : (
-        <div className="greet-main" id="greeting">
-          <div className="greeting-main">
-            <div className="greeting-image-div">
-              <img className="profile-image" alt="user profile" src={userImage} />
-              <h2>{username}</h2>
-              <Typist>{subTitle}</Typist>
-            </div>
+          <div className="greet-main" id="greeting">
+            <div className="greeting-main">
+              <div className="greeting-image-div">
+                <img className="profile-image" alt="user profile" src={userImage} />
+                <h2>{username}</h2>
+                <Typist>{subTitle}</Typist>
+              </div>
 
-            <div className="greeting-text-div">
-              <div>
-                <p className="greeting-text-p subTitle">{description1}</p>
-                <p className="greeting-text-p subTitle">{description2}</p>
-                <div className="button-greeting-div">
-                  {/* <Button text="See my resume" newTab={true} href={resumeLink} /> */}
+              <div className="greeting-text-div">
+                <div>
+                  <p className="greeting-text-p subTitle">{description1}</p>
+                  <p className="greeting-text-p subTitle">{description2}</p>
+                  <div className="button-greeting-div">
+                    {/* <Button text="See my resume" newTab={true} href={resumeLink} /> */}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <button
-            onClick={() => {
-              setIsEditable(!isEditable);
-            }}
-          >
-            Edit
+            <button
+              onClick={() => {
+                setIsEditable(!isEditable);
+              }}
+            >
+              Edit
           </button>
-        </div>
-      )}
+          </div>
+        )}
     </Fade>
   );
 }
