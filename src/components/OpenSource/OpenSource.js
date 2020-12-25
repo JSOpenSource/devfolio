@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ListGroup, ListGroupItem, Spinner } from 'reactstrap';
+import { github as user } from '../../data.json'
 import './openSource.scss'
 
 export default function OpenSource() {
     const [repos, setRepos] = useState([])
-    const user = 'DevDaksh'
     const baseURL = `https://api.github.com/users/` + user + `/repos`;
 
     const getData = () => {
