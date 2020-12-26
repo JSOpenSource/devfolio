@@ -23,7 +23,8 @@
     "react-reveal": "^1.2.2",
     "react-typist": "^2.0.5",
     "reactstrap": "^8.7.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "src": "^1.1.2"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
