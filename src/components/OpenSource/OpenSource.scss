@@ -1,23 +1,23 @@
 @use './../../base';
 
 .openSource {
-    min-height: 10vh;
-    padding: 1rem;
-    background: base.$bg-color;
+  min-height: 10vh;
+  padding: 1rem;
+  background: base.$bg-color;
 }
 
 .item {
-    margin: 1rem 0rem 1rem 0rem;
-    font-size: 0.9rem;
-    background: base.$bg-color;
-    border-color: base.$text-color;
-    color: base.$text-color;
+  margin: 1rem 0rem 1rem 0rem;
+  font-size: 0.9rem;
+  background: base.$bg-color;
+  border-color: base.$text-color;
+  color: base.$text-color;
 }
 
 .language {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .repoName {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }

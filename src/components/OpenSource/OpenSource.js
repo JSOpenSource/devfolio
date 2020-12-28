@@ -7,43 +7,42 @@ import { github as user } from '../../data.json';
 import './OpenSource.scss';
 
 export default function OpenSource() {
-    const [repos, setRepos] = useState([])
-    const baseURL = `https://api.github.com/users/` + user + `/repos`;
+  const [repos, setRepos] = useState([]);
+  const baseURL = `https://api.github.com/users/` + user + `/repos`;
 
-    const getData = () => {
-        axios.get(baseURL)
-            .then(res => setRepos(res.data))
-    }
+  const getData = () => {
+    axios.get(baseURL).then((res) => setRepos(res.data));
+  };
 
-    useEffect(() => {
-        getData()
-    }, [])
+  useEffect(() => {
+    getData();
+  }, []);
 
-    if (repos) {
-        return (
-            <div className="openSource">
-                {
-                    repos.map(el => (
-                        <div key={el.id}>
-                            <ListGroup>
-                                <ListGroupItem className="item">
-                                    <span className="repoName"><a href={el.html_url}>{el.full_name}</a></span>
-                                    <br />
-                                    <span>- {el.description}</span>
-                                    <br />
-                                    <span className="language">🟡 {`${el.language}`}</span>
-                                </ListGroupItem>
-                            </ListGroup>
-                        </div>
-                    ))
-                }
-            </div>
-        )
-    } else {
-        return (
-            <>
-                <Spinner color="primary"></Spinner>
-            </>
-        )
-    }
+  if (repos) {
+    return (
+      <div className="openSource">
+        {repos.map((el) => (
+          <div key={el.id}>
+            <ListGroup>
+              <ListGroupItem className="item">
+                <span className="repoName">
+                  <a href={el.html_url}>{el.full_name}</a>
+                </span>
+                <br />
+                <span>- {el.description}</span>
+                <br />
+                <span className="language">🟡 {`${el.language}`}</span>
+              </ListGroupItem>
+            </ListGroup>
+          </div>
+        ))}
+      </div>
+    );
+  } else {
+    return (
+      <>
+        <Spinner color="primary"></Spinner>
+      </>
+    );
+  }
 }

@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const profileSlice = createSlice({
-  name: "header",
+  name: 'header',
   initialState: {
-    username: "John Doe",
+    username: 'John Doe',
     userImage:
-      "https://www.giftspeaks.in/wp-content/uploads/2020/01/Bearded-Face-Animated-Pure-Cotton-Tshirt-for-Men-White-Design.jpg",
-    subTitle: "A web developer having good front end experience especially in ReactJS",
-    description1: "I am a web developer who works on ReactJS and Angular",
+      'https://www.giftspeaks.in/wp-content/uploads/2020/01/Bearded-Face-Animated-Pure-Cotton-Tshirt-for-Men-White-Design.jpg',
+    subTitle: 'A web developer having good front end experience especially in ReactJS',
+    description1: 'I am a web developer who works on ReactJS and Angular',
     description2:
-      "I design and develop web applications using the latest technologies. I am an aspiring full stack developer",
+      'I design and develop web applications using the latest technologies. I am an aspiring full stack developer',
   },
   reducers: {
     setData: (state, { payload }) => {

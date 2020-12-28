@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./Header.scss";
-import Switch from "@material-ui/core/Switch";
-import Headroom from "react-headroom";
+import React, { useState } from 'react';
+import './Header.scss';
+import Switch from '@material-ui/core/Switch';
+import Headroom from 'react-headroom';
 import {
   Collapse,
   Navbar,
@@ -11,10 +11,10 @@ import {
   NavItem,
   NavLink,
   NavbarText,
-} from "reactstrap";
+} from 'reactstrap';
 
-import { useSelector, useDispatch } from "react-redux";
-import { setDarkMode } from "./headerSlice";
+import { useSelector, useDispatch } from 'react-redux';
+import { setDarkMode } from './headerSlice';
 
 export default function Header() {
   const { darkMode, name, items } = useSelector((state) => state.header);
@@ -45,7 +45,7 @@ export default function Header() {
             <Nav className="mr-auto" navbar></Nav>
 
             {items.map((item) => (
-              <a className="header-item" key={item} href={"#" + item}>
+              <a className="header-item" key={item} href={'#' + item}>
                 {item}
               </a>
             ))}
@@ -54,7 +54,7 @@ export default function Header() {
               checked={darkMode}
               onChange={handleChange}
               name="checked"
-              inputProps={{ "aria-label": "secondary checkbox" }}
+              inputProps={{ 'aria-label': 'secondary checkbox' }}
             />
           </Collapse>
         </Navbar>
