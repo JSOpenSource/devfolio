@@ -1,8 +1,8 @@
-import React from "react";
-import { useForm, Controller } from "react-hook-form";
+import React from 'react';
+import { useForm, Controller } from 'react-hook-form';
 
-import styles from "./Edit.scss";
-import TextField from "@material-ui/core/TextField";
+import styles from './Edit.scss';
+import TextField from '@material-ui/core/TextField';
 
 export default function Edit(props) {
   const { register, handleSubmit, control } = useForm();

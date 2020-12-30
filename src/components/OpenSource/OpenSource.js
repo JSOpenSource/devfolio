@@ -7,18 +7,18 @@ import { github as username } from '../../data.json';
 import './OpenSource.scss';
 
 export default function OpenSource() {
-    const [user, setUser] = useState(username)
-    const [repos, setRepos] = useState([])
-    const baseURL = `https://api.github.com/users/` + user + `/repos`;
 
-    const getData = () => {
-        axios.get(baseURL)
-            .then(res => setRepos(res.data))
-    }
+  const [user, setUser] = useState(username)
+  const [repos, setRepos] = useState([])
+  const baseURL = `https://api.github.com/users/` + user + `/repos`;
 
-    useEffect(() => {
-        getData()
-    }, [])
+  const getData = () => {
+    axios.get(baseURL).then((res) => setRepos(res.data));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
     if (repos) {
         return (

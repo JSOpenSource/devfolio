@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "prettier": "2.2.1",
     "sass": "^1.30.0"
   }
 }
