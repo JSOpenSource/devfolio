@@ -25,10 +25,20 @@
 
 .language {
   font-size: 0.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .repoName {
     font-size: 1.1rem;
+}
+
+.circle {
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1rem 0 0;
 }
 
 /* Media Query */

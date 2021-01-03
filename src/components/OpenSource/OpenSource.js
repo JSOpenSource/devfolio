@@ -5,20 +5,21 @@ import { ListGroup, ListGroupItem, Spinner } from 'reactstrap';
 import { github as username } from '../../data.json';
 
 import './OpenSource.scss';
+import './Colors.scss';
 
 export default function OpenSource() {
 
-  const [user, setUser] = useState(username)
-  const [repos, setRepos] = useState([])
-  const baseURL = `https://api.github.com/users/` + user + `/repos`;
+    const [user, setUser] = useState(username)
+    const [repos, setRepos] = useState([])
+    const baseURL = `https://api.github.com/users/` + user + `/repos`;
 
-  const getData = () => {
-    axios.get(baseURL).then((res) => setRepos(res.data));
-  };
+    const getData = () => {
+        axios.get(baseURL).then((res) => setRepos(res.data));
+    };
 
-  useEffect(() => {
-    getData();
-  }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
     if (repos) {
         return (
@@ -45,7 +46,7 @@ export default function OpenSource() {
                                         <br />
                                         <span>- {el.description}</span>
                                         <br />
-                                        <span className="language">🟡 {`${el.language}`}</span>
+                                        <span className="language"> <span className={`${el.language} circle`}> </span> {`${el.language}`}</span>
                                     </ListGroupItem>
                                 </ListGroup>
                             </div>
