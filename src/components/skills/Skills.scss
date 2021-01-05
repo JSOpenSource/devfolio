@@ -1,16 +1,18 @@
 @use './../../base';
 
 .FrontEnd,.BackEnd,.DataBase {
-    height: 188px;
-    width:188px ;
+    height: fit-content;
+    width:250px ;
     position: relative;
-    margin-bottom: 30px;
+    
     background: #fafafa;
     background-size: cover;
     text-transform: uppercase;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
+    justify-content: space-between;
+    margin: 20px;
   }
 
   .ribbon5 {
@@ -45,20 +47,56 @@
     border-top: 10px solid #888785;
     border-right: 10px solid transparent;
   }
-  section {
-    margin: 0 auto; 
-    max-width: 660px;
-    padding: 0 20px;
-    height: 100vh;
+ 
+  .SkillSection {
+    display: flex;
+    margin: 0 50px;
+    padding: 20px;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
   }
 
-  @media (min-width: 500px) {
+
+  @media only screen and (max-width: 700px) {
     .SkillSection {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      text-align: center;
+      justify-content:center;
+      align-items: center;
+      width: fit-content;
+      height:150vh;
+      flex-direction: column;
+      margin: 0;
     }
     .ribbon {
       width: 48%;
     }
   }
+  .BadgeWrapper{
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+
+  .Badge{
+    color:#070707;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-color: black;
+    border-style: solid;
+
+  }
+  
+}
