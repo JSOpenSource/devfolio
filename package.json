@@ -15,6 +15,7 @@
     "@reduxjs/toolkit": "^1.5.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "reac": "0.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-headroom": "^3.1.0",
