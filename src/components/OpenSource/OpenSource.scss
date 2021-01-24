@@ -4,20 +4,48 @@
   min-height: 10vh;
   padding: 1rem;
   background: base.$bg-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: center;
 }
 
 .item {
-  margin: 1rem 0rem 1rem 0rem;
+  min-height: 15vh;
+  width: 40vw;
+  margin: 1rem;
   font-size: 0.9rem;
   background: base.$bg-color;
   border-color: base.$text-color;
   color: base.$text-color;
+  display: flex;
+  flex-direction: column;
 }
 
 .language {
   font-size: 0.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .repoName {
-  font-size: 1.1rem;
+    font-size: 1.1rem;
+}
+
+.circle {
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .item{
+      min-height: 25vh;
+      width: 80vw;
+      padding: 1rem;
+  }
 }
