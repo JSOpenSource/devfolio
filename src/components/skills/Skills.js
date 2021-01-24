@@ -4,59 +4,48 @@ import './Skills.scss';
 
 
  const Skills = ()=> {
+
+    let skillData = [
+        {
+            name: "Frontend",
+            list: ["Html", "Css", "Scss", "JavaScript", "React", "Angular", "Webpack"]
+        },
+        {
+            name: "Backend",
+            list: ["NodeJs", "ExpressJs", "Flask"]
+        },
+        {
+            name: "Database",
+            list: ["Postgress", "SQL", "Mongodb"]
+        },
+    ]
     
     //  const {frontend,backend,database} = useSelector((state) => state.SkillsReducer)
     return (
-       
-            <div className="SkillSection">
-                <div className="FrontEnd">
-                    <span class="ribbon5">
-                        <span>Front End</span>
-                    </span>
-                    {/* {frontend.map((item)=>
-                        (
-                            <div className="Badge">{item}</div>
-                        )
-                    )} */}
-                    <div className='BadgeWrapper'>
-                    <div className="Badge">HTML</div>
-                    <div className="Badge">CSS</div>
-                    <div className="Badge">JAVASCRIPT</div>
+            <section className="skill">
+                <div className="skill__container">
+                    <div className="skill__row">
+                        {
+                            skillData.map(data => (
+                                <div className="skill__card">
+                                    <div className="skill__card-header">
+                                        <h3 className="skill__primary-heading">{data.name}</h3>
+                                    </div>
+                                    <div className="skill__card-body">
+                                        <ul className="skill__list">
+                                            {
+                                                data.list.map(skill => (
+                                                    <li className="skill__item"><p className="skill__text">{skill}</p></li>
+                                                ))
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
-                <div className="BackEnd">
-                    <span class="ribbon5">
-                        <span>Back End</span>
-                    </span>
-                    {/* {backend.map((item)=>
-                         (
-                            <div className="Badge">{item}</div>
-                        )
-                    )} */}
-                    <div className='BadgeWrapper'>
-                    <div className="Badge">NodeJS</div>
-                    <div className="Badge">Express JS</div>
-                    <div className="Badge">PHP</div>
-                    </div>
-                </div>
-                <div className="DataBase">
-                    <span class="ribbon5">
-                        <span>Data Base</span>
-                    </span>
-                    {/* {database.map((item,)=>
-                        (
-                            <div className="Badge">{item}</div>
-                        )
-                    )} */}
-                    <div className='BadgeWrapper'>
-                    <div className="Badge">MySQL</div>
-                    <div className="Badge">MongoDB</div>
-                    <div className="Badge">PostgreSQL</div>
-                    </div>
-                </div>
-
-            </div>
-        
+            </section>
     );
 }
 
