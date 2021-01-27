@@ -5,6 +5,7 @@ import Header from './header/Header';
 import Profile from './profile/Profile';
 import Skills from './skills/Skills';
 import OpenSource from './OpenSource/OpenSource';
+import Experience from './experience/Experience';
 
 export default function App() {
   const { darkMode } = useSelector((state) => state.header);
@@ -13,8 +14,9 @@ export default function App() {
     <div className={'folio-container ' + (darkMode ? 'dark-mode' : 'bright-mode')}>
       <Header />
       <Profile />
-      
+
       <Skills />
+      <Experience />
       <OpenSource />
     </div>
   );
